@@ -50,7 +50,7 @@ contract InsuredFactory {
     function createInsuredCollateral(
         bool collateralPriceReduceType
     ) external payable returns (InsuredCollateral _insuredCollateralInstance) {
-        require(_haveCreatedCrypto[msg.sender] == false, "Already Created");
+        require(_haveCreatedCollateral[msg.sender] == false, "Already Created");
         uint ethValue = (msg.value * 1800) / 10 ** 18;
         uint _LoanAmount = (ethValue * (1000 * 10 ** 18)) / 1800;
 
