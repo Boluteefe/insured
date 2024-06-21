@@ -51,7 +51,6 @@ contract InsuranceCrypto {
         if (insurers[msg.sender].lastClaimed >= block.timestamp + 182 days) {
             revert BiYearClaimMadeAlready();
         }
-        insurers[insurer].InsuredTimes++;
         if (address(this).balance < _value) {
             revert InsufficientBal();
         }
