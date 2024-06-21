@@ -51,8 +51,8 @@ contract InsuredFactory {
         bool collateralPriceReduceType
     ) external payable returns (InsuredCollateral _insuredCollateralInstance) {
         require(_haveCreatedCollateral[msg.sender] == false, "Already Created");
-        uint ethValue = (msg.value * 1800) / 10 ** 18;
-        uint _LoanAmount = (ethValue * (1000 * 10 ** 18)) / 1800;
+        uint ethValue = (msg.value * 3600) / 10 ** 18;
+        uint _LoanAmount = (ethValue * (1000 * 10 ** 18)) / 3600;
 
         _insuredCollateralInstance = new InsuredCollateral(
             msg.value,

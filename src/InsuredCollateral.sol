@@ -76,7 +76,7 @@ contract InsuredCollateral {
     }
 
     function getCurrentEthPrice() internal pure returns (uint) {
-        return 1800;
+        return 3600;
     }
 
     function getTenPercentRepayment()
